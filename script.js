@@ -1,3 +1,10 @@
+function adicionaZero(numero){
+    if (numero <= 9) 
+        return "0" + numero;
+    else
+        return numero; 
+}
+
 function carregar(){
 var img = document.getElementById("imagemAtual");
 var msg = document.getElementById("msg");
@@ -8,7 +15,7 @@ var footer = document.getElementById("footer");
 var data = new Date();
 var horas = data.getHours();
 var minutos = data.getMinutes();
-msg.innerHTML = `Horario Atual: ${horas}:${minutos}`;
+msg.innerHTML = `Horario Atual: ${adicionaZero(horas)}:${adicionaZero(minutos)}`;
 if(horas >= 5 && horas <= 12){
     img.src = "fotomanha.png"
     document.body.style.background = "#ecd8c4";
