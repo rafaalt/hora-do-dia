@@ -16,7 +16,7 @@ var data = new Date();
 var horas = data.getHours();
 var minutos = data.getMinutes();
 msg.innerHTML = `Horario Atual: ${adicionaZero(horas)}:${adicionaZero(minutos)}`;
-if(horas >= 5 && horas <= 12){
+if(horas >= 5 && horas < 12){
     img.src = "fotomanha.png"
     document.body.style.background = "#ecd8c4";
     msg.style.color = "#b8885a";
@@ -25,7 +25,7 @@ if(horas >= 5 && horas <= 12){
     section.style.background = "#ece5df";
     header.style.color = "#734d2a";
     footer.style.color = "#734d2a";
-}else if(horas > 12 && horas <= 18){
+}else if(horas >= 12 && horas <= 18){
     img.src = "fototarde.png"
     document.body.style.background = "#e9a470";
     msg.style.color = "#9a490d";
